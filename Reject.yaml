@@ -3,8 +3,8 @@ desc: 自用Reject重写
 
 http:
   # HTTP(S) 重写，支持header、302、307、reject多种策略
-  url-rewrite:
-    - ^https?:\/\/api\.21jingji\.com\/ad\/ ? reject
+  rewrite:
+    - ^https?:\/\/api\.21jingji\.com\/ad\/ - reject
     - ^https?:\/\/service\.4gtv\.tv\/4gtv\/Data\/(GetAD|ADLog) - reject
     - ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv)\/ - reject
     - ^https?:\/\/app\.58\.com\/api\/home\/invite\/popupAdv - reject
