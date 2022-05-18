@@ -2,6 +2,8 @@ name: 小火箭重写配置
 desc: 自用Reject重写
 
 http:
+  mitm:
+    - g.cn
   # HTTP(S) 重写，支持header、302、307、reject多种策略
   rewrite:
     - ^https?:\/\/api\.21jingji\.com\/ad\/ - reject
