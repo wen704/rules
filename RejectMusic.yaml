@@ -1,0 +1,10 @@
+name: 小火箭重写配置Lite
+desc: 自用Reject重写(Music)
+
+http:
+  rewrite:
+    - ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ - reject
+    - ^https?:\/\/[\w-]+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ - reject
+    - ^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ - reject
+    - ^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
+    - ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
