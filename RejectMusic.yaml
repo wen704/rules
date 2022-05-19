@@ -2,6 +2,9 @@ name: 小火箭重写配置Lite
 desc: 自用Reject重写(Music)
 
 http:
+  mitm:
+    - g.cn
+    - "*.google.cn"
   rewrite:
     - ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ - reject
     - ^https?:\/\/[\w-]+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ - reject
