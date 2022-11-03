@@ -65,6 +65,5 @@ http:
 
 script-providers:
   bilibili:
-    #url: https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js
-    url: https://raw.githubusercontent.com/wen704/rules/main/bilibili_json.js
+    url: https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/bilibili_json.js
     interval: 86400
