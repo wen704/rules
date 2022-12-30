@@ -1,0 +1,101 @@
+#!name= Reject
+#!desc= 原脚本内部分阻止重写 (URL TO TYPE)[ ][ _ ][ HEADER, 302, 307, PROXY, DIRECT, REJECT(404,没有内容), REJECT-DICT(200,空JSON对象), REJECT-ARRAY(200,空JSON数组), REJECT-200(200,没有内容), REJECT-IMG(200,1像素GIF), REJECT-TINYGIF(200,1像素GIF) ]
+#!homepage= https://github.com/wen704/rules
+#!author= wen704
+#!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
+
+[URL Rewrite]
+#京东
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start _ reject
+
+#波点音乐
+^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/musicResource\/.+ _ reject
+#波点音乐
+^https:\/\/bodiancdn\.kuwo\.cn\/.+\.mp4 _ reject
+#波点音乐
+^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/view\?uid _ reject
+#波点音乐
+^http:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\?uid _ reject
+
+# AbeamTV - api.abema.io
+^https?:\/\/api\.abema\.io\/v\d\/ip\/check - reject
+
+#～BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗@ddgksf2013
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? - reject-dict
+#～BiliBili_哔哩哔哩_屏蔽广告浮窗@ddgksf2013
+^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive - reject-dict
+#～BiliBili_哔哩哔哩_屏蔽IP请求@ddgksf2013
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+#～BiliBili_哔哩哔哩_屏蔽DefaultWord@ddgksf2013
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
+#～BiliBili_哔哩哔哩_屏蔽首页右上活动[卸载重装]@ddgksf2013
+#^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - reject-dict
+#～BiliBili_哔哩哔哩_应用开屏去广告@bm7
+^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/show - reject-dict
+#～BiliBili_哔哩哔哩_Defaultword@ddgksf2013
+^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/defaultwords - reject-dict
+#～BiliBili_哔哩哔哩_Material_Ad@ddgksf2013
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject-dict
+#～BiliBili_哔哩哔哩_小卡片广告@ddgksf2013
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - reject-dict
+#～BiliBili_哔哩哔哩_解除SIM卡地区限制
+#(^https?:\/\/app\.biliintl\.com\/intl\/.+)(&sim_code=\d+)(.+)-302$1$3
+#～BiliBili_哔哩哔哩_去除搜索中的大家都在搜@bm7
+^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject
+#～BiliBili_哔哩哔哩_去除动态中的话题@bm7
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject-dict
+#～BiliBili_哔哩哔哩_可能的一些推广(beta)@bm7
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject-dict
+#～BiliBili_哔哩哔哩_漫画去广告@ddgksf2013
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - reject-dict
+
+# ～ XiMaLaYa_喜马拉雅_修复轮播Ad失效Bug@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF - reject
+# ～ XiMaLaYa_喜马拉雅_播放页_Live@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ - reject
+# ～ XiMaLaYa_喜马拉雅_MyInfo红点提醒@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽大红包Tips@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽gif弹窗Ad@ddgksf2013
+^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽Aged请求@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) - reject
+# ～ XiMaLaYa_喜马拉雅_部分Tab弹窗@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽红点提示@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽minor请求@ddgksf2013
+^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽隐私搜集@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽版本更新@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽开屏广告@ddgksf2013
+^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽位置请求@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽热搜词@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/hotWord - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽搜索框定时_Ad@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/guideWord - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽实时Ad请求@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime - reject
+# ～ XiMaLaYa_喜马拉雅_屏蔽ting_Ad@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? - reject
+
+# 爱美剧去广告
+^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/index - reject-dict
+^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ver\/index_ios$ - reject
+^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/pay\/ok$ - reject-dict
+
+# 墨鱼手动添加补充
+# 好价详情页去广告
+^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/other_modul - reject
+# 好价详情页红包小助手
+^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/user_related_modul - reject
+# Wiki(618晒物活动推广，将来可能不是广告)
+^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/wiki_related_modul - reject
+
+[MITM]
+hostname = %APPEND% api.m.jd.com, bd-api.kuwo.cn, bodiancdn.kuwo.cn, api.abema.io, api.live.bilibili.com, api.bilibili.com, app.bilibili.com, app.biliintl.com, api.vc.bilibili.com, manga.bilibili.com, xima.*.com, xima.com, api.bjxkhc.com, haojia.m.smzdm.com
