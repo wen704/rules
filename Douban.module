@@ -1,0 +1,30 @@
+#!name= 豆瓣电影移动版网页优化
+#!desc= 豆瓣电影移动版网页增强，快捷跳转茶杯狐与 Libvio 搜索，豆瓣移动版网页去广告
+#!homepage= https://github.com/ddgksf2013
+#!author= ddgksf2013
+#!url= https://github.com/ddgksf2013/Rewrite/raw/master/Html/Douban.conf
+
+# ==UserScript==
+# @Name              豆瓣电影移动版网页优化
+# @Author            Neurogram, Cuttlefish
+# @ForHelp           若有屏蔽广告的需求, 可公众号后台回复APP名称
+# @TgChannel         https://t.me/ddgksf2021
+# @Contribute        https://t.me/ddgksf2013_bot
+# @Feedback          📮 ddgksf2013@163.com 📮
+# @WechatID          公众号墨鱼手记
+# @UpdateTime        2022-12-09
+# @Attention         如需引用请注明出处，谢谢合作！
+# @Function          豆瓣电影移动版网页增强，快捷跳转茶杯狐与 Libvio 搜索，豆瓣移动版网页去广告
+# @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/Html/Douban.conf
+# ==/UserScript==
+
+
+[Script]
+# > 茶杯狐、Libvio 流媒体
+茶杯狐_Libvio_流媒体 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/douban.js,pattern=^https?:\/\/m\.douban\.com\/movie\/subject\/.+,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# > Airtable 收藏
+Airtable_收藏 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/douban.js,pattern=^https?:\/\/m\.douban\.com\/movie\/subject\/.+\?seen=\d,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+
+[MITM]
+hostname = %APPEND% m.douban.com
