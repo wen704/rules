@@ -1,0 +1,147 @@
+#!name= 微信小程序去除广告直接查看隐藏内容或弹窗显示内容
+#!desc= 进入小程序，搜索对应名称即可
+#!homepage= https://github.com/ddgksf2013
+#!author= ddgksf2013
+#!url= https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Applet.conf
+
+# ==UserScript==
+# @ScriptName        微信小程序去除广告直接查看隐藏内容或弹窗显示内容
+# @Using             复制重写链接至QuantumultX的[rewrite_remote]下
+# @Download          进入小程序，搜索对应名称即可
+# @Author            Cuttlefish
+# @TgChannel         https://t.me/ddgksf2021
+# @Feedback          https://t.me/ddgksf2013_bot
+# @TgPost            https://t.me/ddgksf2021/1618
+# @WechatID          公众号墨鱼手记
+# @UpdateTime        2022-10-06
+# @ForHelp           若有需要调试的小程序，可公众号后台回复小程序名称
+# @AppletNumer       共计 38 个小程序（持续更新中...）
+# @Suitable          自行观看"# > "注释内容
+# @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Applet.conf
+# ==/UserScript==
+
+
+[URL Rewrite]
+# > 034 怪兽充电（2022-03-10）@ddgksf2013
+^https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert\/skin) _ reject-dict
+
+# > 004 黑科技软件（2020-09-01）@ddgksf2013
+# > 辅助去除页面嵌入式式卡片广告（20201214）
+^https?:\/\/hkj178\.com\/wp-json\/mp\/v2\/advert\/wechat _ reject-200
+
+
+[Script]
+# > 039 科技窝（2022-03-20）@ddgksf2013
+科技窝 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/www\.bbkj\.work\/wp-json\/watch-life-net\/v1\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 038 APP基地（2022-03-20）@ddgksf2013
+APP基地 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https\:\/\/wx\.wxqqurl\.cn\/wp-json\/watch-life-net\/v1\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 037 搜罗好货（2022-03-12）@ddgksf2013
+搜罗好货 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/wp3\.lobdol\.cn\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 036 小打卡（2022-03-12）@ddgksf2013
+小打卡 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xiaodaka.js,pattern=^https?:\/\/uranus\.sharedaka\.com\/api\/v3\/user\/info\/get,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 035 漫画台Lite（2022-03-12）@ddgksf2013
+漫画台Lite = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/manhuatailite.js,pattern=^https?:\/\/comic\.321mh\.com\/app_api\/v\d\/getcomicinfo_body,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 033 公眾號文章去廣告（2022-03-01）@ddgksf2013
+# 公眾號文章去廣告 = type=http-response,script-path=["advertisement_num":\d,"advertisement_info":\[.+\],]=>["advertisement_num":0,"advertisement_info":[],],pattern=^(http|https):\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# ^(http|https):\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body "advertisement_num":\d,"advertisement_info":\[.+\], response-body "advertisement_num":0,"advertisement_info":[],
+
+# > 032 掌上公交（2022-03-01）@ddgksf2013
+掌上公交 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/zhangshanggongjiao.js,pattern=^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 031 AShare（2022-01-01）@ddgksf2013
+AShare = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/tan\.ipnas\.ltd\/wp-json\/wp\/v2,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 030 柠檬图库（2021-12-24）@ddgksf2013
+AShare = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/nmtk.js,pattern=^https?:\/\/api\.bspapp\.com\/client,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 029 不完全指北（2021-12-15）@ddgksf2013
+AShare = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/4thdimension\.top\/wp-json\/watch-life-net\/v1\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 028 纸塘壁纸 （2021-07-10）@ddgksf2013 ❌失效，验证token
+# ^https?:\/\/api\.bspapp\.com\/client url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ztbz.js
+
+# > 027 予图阁（2021-01-19）@ddgksf2013 ❌失效，验证token
+# ^https?:\/\/3dd0be8a-54fe-43ff-a0e7-f670c4f20432\.bspapp\.com\/.*get_wallpaper_detail url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ytg.js
+
+# > 026 科技窝（2020-12-28）@ddgksf2013
+科技窝 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/www\.benbenfx\.xyz\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 025 森茂小苑 （2020-12-19）@ddgksf2013
+森茂小苑 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/[a-z]+\.smkj33\.top\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 024 电视盒子君（2020-12-18）@ddgksf2013
+电视盒子君 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/tvapp\.guilaile\.cn\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 023 公子黑科技（2020-12-18）@ddgksf2013
+公子黑科技 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/gz\.gongzijx\.com\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 022 世颜说 （2020-12-17）@ddgksf2013
+世颜说 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/d\.syshhc\.top\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 021 搞机师兄（2020-12-16）@ddgksf2013
+搞机师兄 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/gjsx\.vip\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 020 火箭软件库（2020-12-16）@ddgksf2013
+火箭软件库 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/jt\.jxjt888\.top\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 019 天书乱谈（2020-12-15）@ddgksf2013
+天书乱谈 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/[a-z]+\.tslt\.xyz\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 018 老胡群英会（2020-12-15）@ddgksf2013
+老胡群英会 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/g\.syshhc\.top\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 017 天泽百宝箱（2020-12-15）@ddgksf2013
+天泽百宝箱 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/c\.jxjt888\.top\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 016 老鬼黑科技（2020-12-15）@ddgksf2013
+老鬼黑科技 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/www\.laoguikeji\.cn\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 015 黑科技软件源（2020-12-15）@ddgksf2013
+黑科技软件源 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/qj\.bpojie\.com\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 014 天书X乱谈（2020-12-15）@ddgksf2013
+天书X乱谈 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/b\.tslt\.xyz\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 013 图层黑科技（2020-12-15）@ddgksf2013
+图层黑科技 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/m\.xgjyouhui\.com\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 012 free 黑科技（2020-12-15）@ddgksf2013
+free黑科技 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/www\.freeheikeji\.cn\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 011 小纸箱助手（2020-12-15）@ddgksf2013
+小纸箱助手 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/xcx\.xianbaow\.com\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 010 扎比科技资源箱 弹框显示内容（2020-12-14）@ddgksf2013
+扎比科技资源箱 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/jabi.js,pattern=^https?:\/\/jabi\.coding\.net\/p\/xcx\/d\/xcx\/git\/raw\/master\/jabikj.json,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 009 AppleAndroid 弹框显示内容（2020-12-14）@ddgksf2013
+AppleAndroid弹框显示内容 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/iosoi\.cn\/wp-json\/wp\/v2\/posts\/\d+,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# > 辅助去除页面嵌入式式卡片广告（2020-12-14）
+AppleAndroid弹框显示内容辅助 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/iosoi\.cn\/wp-content\/plugins,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 008 森茂雅苑 （2020-10-27）@ddgksf2013
+森茂雅苑 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/d\.smkj33\.top\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 005-007 酸鸡汤,老爷花苑,御花园（2020-12-14）@ddgksf2013
+酸鸡汤_老爷花苑_御花园 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/[a-z]+\.ddly666\.top\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 004 黑科技软件（2020-09-01）@ddgksf2013
+黑科技软件 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/hkj178.com\/wp-json\/mp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 003 天泽后花园（2020-09-01）@ddgksf2013
+天泽后花园 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/a\.jxjt888\.top\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 002 小野分享（2020-12-15）@ddgksf2013
+小野分享 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/lysl2020\.com\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 001 搜罗好货（2020-09-24）@ddgksf2013
+搜罗好货 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/xcx.js,pattern=^https?:\/\/www\.i3zh\.com\/wp-json\/wp\/v2\/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+
+[MITM]
+hostname = %APPEND% www.bbkj.work, wx.wxqqurl.cn, wp3.lobdol.cn, uranus.sharedaka.com, comic.321mh.com, awg.enmonster.com, mp.weixin.qq.com, wx.mygolbs.com, jabi.coding.net, api.bspapp.com, 3dd0be8a-54fe-43ff-a0e7-f670c4f20432.bspapp.com, *.tslt.xyz, g.syshhc.top, c.jxjt888.top, www.laoguikeji.cn, qj.bpojie.com, b.tslt.xyz, m.xgjyouhui.com, www.freeheikeji.cn, xcx.xianbaow.com, *.smkj33.top, *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com, iosoi.cn, jabi.coding.net, jt.jxjt888.top, gjsx.vip, d.syshhc.top, gz.gongzijx.com, tvapp.guilaile.cn, www.benbenfx.xyz, 4thdimension.top, api.bspapp.com, tan.ipnas.ltd
