@@ -23,30 +23,31 @@
 
 [URL Rewrite]
 # > 10 PornHub[网页优化]@ddgksf2013 - 网站地址：https://cn.pornhub.com
-^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads _ reject-dict
+^https?:\/\/(cn|www)\.pornhub\.com\/_xa\/ads _ reject-dict
 
 
 [Script]
 # > 14 奈飞鸭[网页优化]@ddgksf2013 - 网站地址：https://yanetflix.com
-奈飞鸭 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/netflix.js,pattern=^https?:\/\/.*netflix.*\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+奈飞鸭1 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/netflix.js,pattern=^https?:\/\/.*netflix.*\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+奈飞鸭2 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/netflix.js,pattern=^https?:\/\/.*kongbuya.*\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 13 哔嘀影视[网页优化]@ddgksf2013 - 网站地址：https://www.bdys01.com 
 哔嘀影视 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bdys.js,pattern=^https?:\/\/.*bdys.*com\/($|([a-z]+)\/(play\/)?\d+.*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 12 茶杯狐[网页优化]@ddgksf2013 - 网站地址：https://cupfox.app
-茶杯狐 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/cupbox.js,pattern=^https?:/\/cupfox\.app\/($|(search|list|s|_next).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+茶杯狐 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/cupbox.js,pattern=^https?:\/\/cupfox\.app\/($|(search|list|s|_next).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 11 Cokemv[网页优化]@ddgksf2013 - 网站地址：https://cokemv.me 
-Cokemv = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/cokemv.js,pattern=^https?:/\/cokemv\.me\/($|vod.*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+Cokemv = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/cokemv.js,pattern=^https?:\/\/cokemv\.me\/($|vod.*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 10 PornHub[网页优化]@ddgksf2013 - 网站地址：https://cn.pornhub.com
-PornHub = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pornhub.js,pattern=^https?:/\/(cn|www)\.pornhub\.com\/($|(view|video).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+PornHub = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pornhub.js,pattern=^https?:\/\/(cn|www)\.pornhub\.com\/($|(view|video).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 09 LeZhu[网页优化]@ddgksf2013 - 网站地址：http://www.lezhutv.com
-LeZhu = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/lezhu.js,pattern=^https?:/\/.*lezhutv\.com\/($|(type|detail|play|index).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+LeZhu = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/lezhu.js,pattern=^https?:\/\/.*lezhutv\.com\/($|(type|detail|play|index).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 08 Bimi[网页优化]@ddgksf2013 - 网站地址：https://www.bimi.net
-Bimi = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bimi.js,pattern=^https?:/\/.*bimi.*net\/($|(vodshow|bangumi|type)\/[0-9a-z-\/]+\/$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+Bimi = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bimi.js,pattern=^https?:\/\/.*bimi.*net\/($|(vodshow|bangumi|type)\/[0-9a-z-\/]+\/$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 07 禁漫天堂[网页优化]@ddgksf2013 - 网站地址：https://18comic.org
 禁漫天堂 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/18comic.js,pattern=^https?:\/\/.*18comic\.org\/($|(album|photo).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
@@ -61,7 +62,7 @@ Bimi = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/
 天空影视 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/tkys.js,pattern=^https?:\/\/.*tkznp.*com\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 03 厂长电影[网页优化]@ddgksf2013 - 网站地址：https://www.czspp.com/
-厂长电影 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/qianoo.js,pattern=^https?:/\/.*czspp.*com\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+厂长电影 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/qianoo.js,pattern=^https?:\/\/.*czspp.*com\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 02 真不卡[网页优化]@ddgksf2013 - 网站地址：https://www.ikandy.fun
 真不卡 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/zhenbuka.js,pattern=^https?:\/\/.*ikandy.*fun\/($|(vod|top).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
@@ -71,4 +72,4 @@ libvio = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/ra
 
 
 [MITM]
-hostname = %APPEND% *netflix*, *bdys*,cupfox.app,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18comic.org,*5y*,*gimytv*,*tkznp*,*czspp*,*ikandy*,*libvio*
+hostname = %APPEND% .*netflix.*, .*kongbuya.*, .*bdys.*, cupfox.app, .*cokemv.*, pornhub.com, .*lezhutv.*, .*bimi.*, 18comic.org, .*5y.*, .*gimytv.*, .*tkznp.*, .*czspp.*, .*ikandy.*, .*libvio.*
