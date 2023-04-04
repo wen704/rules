@@ -1,0 +1,20 @@
+#!name= 哔哩哔哩Upos服务器替换为腾讯Cos对象存储
+#!desc= 哔哩哔哩Upos服务器替换为腾讯Cos对象存储
+#!homepage= https://github.com/ddgksf2013
+#!author= ddgksf2013
+#!url= https://github.com/ddgksf2013/Rewrite/raw/master/Function/UposRedirect.conf
+
+##########################################################################################
+# - 哔哩哔哩Upos服务器替换为腾讯Cos对象存储
+# - 更新时间：2022-08-10
+# - @ddgksf2013,@alyce233
+# - https://t.me/ddgksf2021
+# - 如需引用请注明出处，谢谢合作！
+# - https://github.com/ddgksf2013/Rewrite/raw/master/Function/UposRedirect.conf
+###########################################################################################
+
+[URL Rewrite]
+^https?:\/\/upos-hz-mirrorakam\.akamaized\.net\/(.*) https://upos-sz-mirrorcos.bilivideo.com/$1 302
+
+[MITM]
+hostname = %APPEND% upos-hz-mirrorakam.akamaized.net
