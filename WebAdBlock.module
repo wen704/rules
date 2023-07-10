@@ -13,7 +13,7 @@
 # @Contribute        https://t.me/ddgksf2013_bot
 # @Feedback          📮 ddgksf2013@163.com 📮
 # @Attention         如需引用请注明出处，谢谢合作！
-# @UpdateTime        2022-12-08
+# @UpdateTime        2023-07-08
 # @Function          自用影视网站去广告配置（不定期更新）
 # @Suitable          自行观看"# > "注释内容
 # @Explain           推荐使用手机版Chrome或Alook浏览器(仅供墨鱼本人及小部分QX用户使用)
@@ -27,15 +27,17 @@
 
 
 [Script]
-# > 14 奈飞鸭[网页优化]@ddgksf2013 - 网站地址：https://yanetflix.com
+# > 15 FreeOk[网页优化]@ddgksf2013 - 网站地址：https://www.freeok.vip
+FreeOk = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/freeok.js,pattern=^https?:\/\/www\.freeok\.vip(\/$|\/[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# > 14 奈飞鸭[网页优化]@ddgksf2013 - 网站地址：https://yanetflix.com [未测试]
 奈飞鸭1 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/netflix.js,pattern=^https?:\/\/.*netflix.*\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
-奈飞鸭2 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/netflix.js,pattern=^https?:\/\/.*kongbuya.*\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 13 哔嘀影视[网页优化]@ddgksf2013 - 网站地址：https://www.bdys01.com 
 哔嘀影视 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bdys.js,pattern=^https?:\/\/.*bdys.*com\/($|([a-z]+)\/(play\/)?\d+.*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 12 茶杯狐[网页优化]@ddgksf2013 - 网站地址：https://cupfox.app
-茶杯狐 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/cupbox.js,pattern=^https?:\/\/cupfox\.app\/($|(search|list|s|_next).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+茶杯狐 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/cupbox.js,pattern=^https?:/\/.*cupfox\.app\/($|(search|list|s|_next).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 11 Cokemv[网页优化]@ddgksf2013 - 网站地址：https://cokemv.me 
 Cokemv = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/cokemv.js,pattern=^https?:\/\/cokemv\.me\/($|vod.*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
@@ -55,21 +57,21 @@ Bimi = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/
 # > 06 555影视[网页优化]@ddgksf2013 - 网站地址：https://555yy6.com
 555影视 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/555.js,pattern=^https?:\/\/.*5y.*\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
-# > 05 剧迷[网页优化]@ddgksf2013 - 网站地址：https://gimytv.app
-剧迷 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/gimytv.js,pattern=^https?:\/\/.*gimytv.*\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# > 05 剧迷[网页优化]@ddgksf2013 - 网站地址：https://gimys.app
+剧迷 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/gimytv.js,pattern=^https?:\/\/.*gimy.*\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
-# > 04 天空影视[网页优化]@ddgksf2013 - 网站地址：https://tkznp.com/ ****
+# > 04 天空影视[网页优化]@ddgksf2013 - 网站地址：https://tkznp.com/ [未测试]
 天空影视 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/tkys.js,pattern=^https?:\/\/.*tkznp.*com\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
-# > 03 厂长电影[网页优化]@ddgksf2013 - 网站地址：https://www.czspp.com/
-厂长电影 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/qianoo.js,pattern=^https?:\/\/.*czspp.*com\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# > 03 厂长电影[网页优化]@ddgksf2013 - 网站地址：https://czzy.art/
+厂长电影 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/qianoo.js,pattern=^https?:\/\/.*czzy.*\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # > 02 真不卡[网页优化]@ddgksf2013 - 网站地址：https://www.ikandy.fun
 真不卡 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/zhenbuka.js,pattern=^https?:\/\/.*ikandy.*fun\/($|(vod|top).*$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
-# > 01 libvio[网页优化]@ddgksf2013 - 网站地址：https://www.iioo.me
+# > 01 libvio[网页优化]@ddgksf2013 - 网站地址：https://www.libvio.me
 libvio = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/libvio.js,pattern=^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 
 [MITM]
-hostname = %APPEND% .*netflix.*, .*kongbuya.*, .*bdys.*, cupfox.app, .*cokemv.*, pornhub.com, .*lezhutv.*, .*bimi.*, 18comic.org, .*5y.*, .*gimytv.*, .*tkznp.*, .*czspp.*, .*ikandy.*, .*libvio.*
+hostname = %APPEND% www.freeok.vip, .*netflix.*, .*kongbuya.*, .*bdys.*, .*cupfox.*, .*cokemv.*, pornhub.com, .*lezhutv.*, .*bimi.*, 18comic.org, .*5y.*, .*gimy.*, .*tkznp.*, .*czzy.*, .*ikandy.*, .*libvio.*

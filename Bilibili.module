@@ -66,17 +66,38 @@
 # 2022-12-05 38、去除推荐页顶部的banner,修复追番与观影页面打开时app闪退的bug，修复开屏脚本提示错误
 # 2022-12-09 39、去除皮肤设置重写，以防与新的皮肤设置脚本冲突
 # 2022-12-15 40、将动态tab页面的最长访问恢复，脚本改动已于app2smile原创不一致，请自行选择使用
+# 2023-01-06 41、压缩并优化B站脚本内容，大小由24kb->5kb
+# 2023-01-07 42、删除脚本中未匹配的$request.url的Part内容
+# 2023-01-09 43、屏蔽B站漫画底部中间的手机图片活动
+# 2023-01-10 44、调整粉色B站与白色B站在直连或代理四种情况下顶部tab，删除白B番剧和影视顶部重复tab
+# 2023-01-16 45、去除白B动态中“可能感兴趣的up主”card
+# 2023-01-16 46、更新proto脚本，去除ipad端视频播放页面右上角的推荐广告
+# 2023-01-17 47、proto动态去广告正则匹配添加grpc.biliapi.net(方便surge用户)，兴许后面QX也会跟进MITM h2
+# 2023-01-18 48、屏蔽B站直播页顶部轮播图，本来想把白B直播顶部的大ICON移植到粉B，但粉B不识别V1
+# 2023-01-22 49、处理B站直播间右下角商品推广
+# 2023-02-02 50、特别说明：由于粉B与白B首页顶部都统一了样式，在代理情况下，港澳台的[动画]页面不会出现，建议关闭重写，代理进入即可看到[动画]tab
+# 2023-02-07 51、由于proto数据源未更新，致使新版粉B的动态页面，图文混合推送中文字不显示，如果介意此bug，可使用解析器排除该重写#out=DynAll
+# 2023-02-09 52、更新biliJson数据源@kokoryh，解决粉色B站动态页面图文混合推送中文字不显示的bug
+# 2023-03-04 53、移除B站视频播放下方的商品推广
+# 2023-04-01 54、应用户需求，B站首页顶部的[番剧]Tab内容可随IP更改内容，主要为国内和港澳台内容
+# 2023-04-04 55、更改首页顶部Tab排序，将'番剧'移到'热门'Tab前面[依据墨鱼自己的喜好]
+# 2023-04-08 56、处理番剧视频播放页下方各种推广，由于请求地址与换区一致，故请单独引用[https://github.com/ddgksf2013/Rewrite/raw/master/Function/BilibiliAutoRegion.conf]
+# 2023-04-09 57、新增移除视频播放页[view/view]下方的activityUrl/reqUser/specialCell/refreshSpecialCell等元素
+# 2023-04-27 58、修复视屏播放页UP主显示未关注问题[即已关注点开视屏却显示未关注]
+# 2023-05-27 59、新增去除交互点赞投票弹幕、青少年弹窗@Maasea，由于QX目前还不支持MITM H2，故新版使用可能存在问题[具体可参考https://t.me/ddgksf2021/3749]，这里推荐使用V7.22.0
+# 2023-05-27 60、新增去除BiliBili搜索页广告，重写按照功能分组，方便用户自行复制添加部分功能
+# 2023-06-28 61、新增去除B站每日青少年弹窗@BiliUniverse
 
 
 [URL Rewrite]
-# ～ BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗@ddgksf2013
-^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? _ reject-dict
 # ～ BiliBili_哔哩哔哩_屏蔽广告浮窗@ddgksf2013
 ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive _ reject-dict
 # ～ BiliBili_哔哩哔哩_屏蔽IP请求@ddgksf2013
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip _ reject
 # ～ BiliBili_哔哩哔哩_屏蔽DefaultWord@ddgksf2013
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default _ reject
+# ～ BiliBili_哔哩哔哩_屏蔽DefaultWord@ddgksf2013
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default _ reject
 # ～ BiliBili_哔哩哔哩_应用开屏去广告@bm7
 ^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/show _ reject-dict
 # ～ BiliBili_哔哩哔哩_Defaultword@ddgksf2013
@@ -89,6 +110,10 @@
 ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr _ reject-dict
 # ～ BiliBili_哔哩哔哩_漫画去广告@ddgksf2013
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) _ reject-dict
+# ～ BiliBili_哔哩哔哩_视频播放下方商品推广@ddgksf2013
+^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\? _ reject-dict
+# ～ BiliBili_哔哩哔哩_漫画去广告@ddgksf2013
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) _ reject-dict
 
 
 [Script]
@@ -97,7 +122,7 @@ BiliBili_哔哩哔哩_屏蔽首页右上活动 = type=http-response,script-path=
 # ～ BiliBili_哔哩哔哩_观影页面去广告@ddgksf2013
 BiliBili_哔哩哔哩_观影页面去广告 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 # ～ BiliBili_哔哩哔哩_应用开屏广告预加载@yjqiang
-BiliBili_哔哩哔哩_应用开屏广告预加载 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+BiliBili_哔哩哔哩_应用开屏广告预加载 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 # ～ BiliBili_哔哩哔哩_1080P高码率+4K画质(番剧和影视除外)@ddgksf2013
 BiliBili_哔哩哔哩_1080P高码率+4K画质 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
@@ -106,6 +131,8 @@ BiliBili_哔哩哔哩_热搜发现 = type=http-response,script-path=https://gith
 
 # ～ BiliBili_哔哩哔哩_推荐去广告@ddgksf2013
 BiliBili_哔哩哔哩_推荐去广告 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# ～ BiliBili_哔哩哔哩_屏蔽直播页顶部轮播图@ddgksf2013
+BiliBili_哔哩哔哩_屏蔽直播页顶部轮播图 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 # ～ BiliBili_哔哩哔哩_追番去广告@ddgksf2013
 BiliBili_哔哩哔哩_追番去广告 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
@@ -129,7 +156,20 @@ BiliBili_哔哩哔哩_Proto去广告 = type=http-response,script-path=https://gi
 # BiliBili_哔哩哔哩_繁体CC字幕转中文简体 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_cc.js,pattern=^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=false
 # ～ BiliBili_哔哩哔哩_去除统一设置的皮肤@ddgksf2013
 BiliBili_哔哩哔哩_去除统一设置的皮肤 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# ～ BiliBili_哔哩哔哩_动态去广告@ddgksf2013
+BiliBili_哔哩哔哩_动态去广告= type=http-response,pattern=^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\? ,requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/bilibili_json.js,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ～ BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗@ddgksf2013
+BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\?,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# ～ BiliBili_哔哩哔哩_搜索去广告@BiliUniverse
+BiliBili_哔哩哔哩_搜索去广告 = type=http-response,script-path=https://raw.githubusercontent.com/BiliUniverse/ADBlock/main/js/BiliBili.ADBlock.response.js,pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# ～ BiliBili_哔哩哔哩_青少年弹窗@Maasea
+BiliBili_哔哩哔哩_青少年弹窗 = type=http-response,script-path=https://raw.githubusercontent.com/BiliUniverse/ADBlock/main/js/BiliBili.ADBlock.response.js,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# ～ BiliBili_哔哩哔哩_UP主推荐广告[适配ipad端]@app2smile@ddgksf2013
+BiliBili_哔哩哔哩_UP主推荐广告 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto.js,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/View$,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+# ～ BiliBili_哔哩哔哩_动态页面去广告@app2smile@kokoryh@ddgksf2013
+BiliBili_哔哩哔哩_动态页面去广告 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto.js,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
 
 
 [MITM]
-hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, *.bilibili.com, *biliapi.net
