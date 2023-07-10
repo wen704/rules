@@ -1,0 +1,14 @@
+#!name= Netflix评分
+#!desc= Netflix评分
+#!homepage= https://github.com/Orz-3
+#!author= Orz-3
+#!url= https://raw.githubusercontent.com/Orz-3/QuantumultX/master/Netflix_ratings.conf
+
+# By yichahucha（https://github.com/yichahucha）
+
+[Script]
+Netflix评分1 = type=http-response,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user\/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+Netflix评分2 = type=http-response,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user\/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+[MITM]
+hostname = %APPEND% ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com

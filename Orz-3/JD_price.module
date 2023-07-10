@@ -1,0 +1,15 @@
+#!name= 京东比价
+#!desc= 京东比价
+#!homepage= https://github.com/Orz-3
+#!author= Orz-3
+#!url= https://raw.githubusercontent.com/Orz-3/QuantumultX/master/JD_TB_price.conf
+
+[Script]
+# 京东比价
+京东比价 = type=http-response,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,pattern=^https?:\/\/api\.m\.jd\.com\/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# 自用历史脚本(匹配地址已与上方合并)
+# 京东比价 = type=http-response,requires-body=true,pattern=^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),max-size=1048576,script-path=https://raw.githubusercontents.com/zwf234/rules/master/js/jd_price.js,enable=true,script-update-interval=86400
+
+[MITM]
+hostname = %APPEND% api.m.jd.com

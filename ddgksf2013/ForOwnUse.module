@@ -1,0 +1,80 @@
+#!name= Only for own use
+#!desc= 墨鱼专属VIP
+#!homepage= https://github.com/ddgksf2013
+#!author= ddgksf2013
+#!url= https://raw.githubusercontent.com/ddgksf2013/dev/master/ForOwnUse.conf
+
+##############################################
+# > 如需引用请注明出处，谢谢合作！
+# > https://t.me/ddgksf2021
+# > Only for own use, created by ddgksf2013
+# > 更新时间：2023-04-23
+# > 以下APP解锁，适用【最新版】，墨鱼都已逐一测试其有效性
+# > 仅支持旧版解锁的重写都已删除或已注释
+# > https://github.com/ddgksf2013/dev/raw/master/ForOwnUse.conf
+##############################################
+
+[Script]
+#>>>>>>>>>>>>>>>>生活类VIP
+# ✅ Spotify
+Spotify = type=http-response,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,pattern=^https?:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ 一言(need登录)
+一言 = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/YiYanProCrack.js,pattern=^https?:\/\/app\.yiyan\.art\/yiyan\/,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ 西窗烛(need登录)
+西窗烛 = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/XiChuangZhuProCrack.js,pattern=^https?:\/\/lchttpapi\.xczim\.com\/*,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ 简讯
+简讯 = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/JianXunProCrack.js,pattern=^https?:\/\/api\.tipsoon\.com\/api\/v1\/user\/info,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ Flightradar24
+Flightradar24 = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/flightradar24.js,pattern=^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+#>>>>>>>>>>>>>>>>新闻类VIP
+# ✅ 财新周刊
+财新周刊 = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/CaiXinZhouKanProCrack.js,pattern=^http?:\/\/ipadcms\.caixin\.com\/tmp\/articles\/*,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+#>>>>>>>>>>>>>>>>图影类VIP
+# ✅ Fimo(need登录)
+Fimo = type=http-response,script-path=https://raw.githubusercontent.com/ddgksf2013/MoYu/master/fimo.js,pattern=^https?:\/\/server\.zbisq\.com\/fimo-user,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ 傲软抠图(need登录)
+傲软抠图 = type=http-response,script-path=https://raw.githubusercontent.com/ddgksf2013/MoYu/master/apowersoft.js,pattern=^https?:\/\/awvp\.aoscdn\.com\/base\/vip\/v2\/vips,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ 美图秀秀
+美图秀秀 = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/MeiTuXiuXiuProCrack.js,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ 克拉壁纸
+克拉壁纸 = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/ClarityProCrack.js,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll|picture\/search|catalog\/listAll|top\/list|picture\/date\?date),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ Picsart
+Picsart = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/PicsartProCrack.js,pattern=^https?:\/\/api\.meiease\.cn\/shop\/subscription\/validate,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ 搜图神器
+#http:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token url response-body vipType": 0 response-body vipType": 1024
+
+# ✅ 黄油相机
+黄油相机 = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/BybutterProCrack.js,pattern=^https?:\/\/api4\.bybutter\.com\/v4\/(users\/me$|shop\/me\/privileges$),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+#>>>>>>>>>>>>>>>>工具类VIP
+# ✅ TopWidgets
+TopWidgets = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/TopwidgetsProCrack.js,pattern=^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ 百度网盘(倍速)
+百度网盘 = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/BaiDuCloudProCrack.js,pattern=^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ WPS(国区)
+WPS = type=http-response,script-path=https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js,pattern=^https:\/\/(vas|account)\.wps\.cn\/(query\/api\/v\d\/list_purchase_info|api\/users\/\d+\/overview),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ Nicegram
+Nicegram = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/NicegramProCrack.js,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10},max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ Appraven(美化)
+Appraven = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/AppravenProCrack.js,pattern=^https?:\/\/appraven\.net\/AppRaven\/(app|social|buy),max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# ✅ 扫描全能王
+扫描全能王 = type=http-response,script-path=https://github.com/ddgksf2013/dev/raw/main/CamscannerProCrack.js,pattern=^https?:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+[MITM]
+hostname = %APPEND% server.zbisq.com, mobile.flightradar24.com, api4.bybutter.com, wallpaper.soutushenqi.com, api.tipsoon.com, *xiaozujian.com, lchttpapi.xczim.com, app.yiyan.art, gateway.caixin.com, notability.com, pan.baidu.com, spclient.wg.spotify.com, wps.cn, ticktick.com, ap*.intsig.net, ipadcms.caixin.com, awvp.aoscdn.com, *.xiuxiu.meitu.com, claritywallpaper.com, api.meiease.cn, restore-access.indream.app, appraven.net

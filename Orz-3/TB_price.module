@@ -1,0 +1,17 @@
+#!name= 淘宝比价
+#!desc= 淘宝比价
+#!homepage= https://github.com/Orz-3
+#!author= Orz-3
+#!url= https://raw.githubusercontent.com/Orz-3/QuantumultX/master/JD_TB_price.conf
+
+[Script]
+# 淘宝比价
+淘宝比价1 = type=http-response,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,pattern=^http?:\/\/.+\/amdc\/mobileDispatch,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+淘宝比价2 = type=http-response,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,pattern=^https?:\/\/trade-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.detail\.getdetail,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+# 自用历史脚本
+# 淘宝比价1 = type=http-request,requires-body=true,pattern=^http://.+/amdc/mobileDispatch,max-size=1048576,script-path=https://raw.githubusercontents.com/zwf234/rules/master/js/tb_price.js,enable=true,script-update-interval=86400
+# 淘宝比价2 = type=http-response,requires-body=true,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,max-size=1048576,script-path=https://raw.githubusercontents.com/zwf234/rules/master/js/tb_price.js,enable=true,script-update-interval=86400
+
+[MITM]
+hostname = %APPEND% trade-acs.m.taobao.com

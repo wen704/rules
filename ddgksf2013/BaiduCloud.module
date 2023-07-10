@@ -1,0 +1,21 @@
+#!name= 百度网盘
+#!desc= 倍速
+#!homepage= https://github.com/ddgksf2013
+#!author= ddgksf2013
+#!url= https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Function/BaiduCloud.conf
+
+# ==UserScript==
+# @ScriptName        百度网盘
+# @Author            @Cuttlefish
+# @WechatID          公众号墨鱼手记
+# @Function          倍速
+# @ScriptTime        20210705
+# @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/Function/BaiduCloud.conf
+# ==/UserScript==
+
+[Script]
+# > 百度云 by ddgksf2013
+百度云 = type=http-response,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bdcloud.js,pattern=^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,max-size=0,requires-body=true,timeout=10,script-update-interval=86400,enable=true
+
+[MITM]
+hostname = %APPEND% pan.baidu.com
