@@ -2,7 +2,7 @@
 #!desc= 进入小程序，搜索对应名称即可
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Applet.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/main/Applet.module
 
 # ==UserScript==
 # @ScriptName        微信小程序去除广告[墨鱼版]

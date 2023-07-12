@@ -2,7 +2,7 @@
 #!desc= 哔哩哔哩Upos服务器替换为腾讯Cos对象存储
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://github.com/ddgksf2013/Rewrite/raw/master/Function/UposRedirect.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/main/UposRedirect.module
 
 ##########################################################################################
 # - 哔哩哔哩Upos服务器替换为腾讯Cos对象存储

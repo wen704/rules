@@ -2,7 +2,7 @@
 #!desc= 使用前请卸载高德地图，挂载脚本然后使用
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/Amap.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/main/Amap.module
 
 // ==UserScript==
 // @ScriptName        高德地图净化[墨鱼版]

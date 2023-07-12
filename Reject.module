@@ -2,7 +2,7 @@
 #!desc= 原脚本内部分阻止重写 (URL TO TYPE)[ ][ _ ][ HEADER, 302, 307, PROXY, DIRECT, REJECT(404,没有内容), REJECT-DICT(200,空JSON对象), REJECT-ARRAY(200,空JSON数组), REJECT-200(200,没有内容), REJECT-IMG(200,1像素GIF), REJECT-TINYGIF(200,1像素GIF) ]
 #!homepage= https://github.com/wen704/rules
 #!author= wen704
-#!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
+#!url= https://raw.githubusercontent.com/wen704/rules/main/Reject.module
 
 [URL Rewrite]
 #京东

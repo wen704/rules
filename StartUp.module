@@ -3,7 +3,7 @@
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
 #!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!url= https://gcore.jsdelivr.net/gh/ddgksf2013/Rewrite/AdBlock/StartUp.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/main/StartUp.module
 
 # ==UserScript==
 # @ScriptName        QX去开屏广告计划 V2.0
