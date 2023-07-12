@@ -2,7 +2,9 @@
 #!desc= 京东比价
 #!homepage= https://github.com/Orz-3
 #!author= Orz-3
-#!url= https://raw.githubusercontent.com/Orz-3/QuantumultX/master/JD_TB_price.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/Orz-3/JD_price.module
+
+# 原作者链接 https://raw.githubusercontent.com/Orz-3/QuantumultX/master/JD_TB_price.conf
 
 [Script]
 # 京东比价

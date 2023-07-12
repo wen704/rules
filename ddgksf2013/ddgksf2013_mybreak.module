@@ -1,8 +1,8 @@
 #!name= 广告屏蔽
 #!desc= 仅用于规则分流去广告
 #!homepage= https://github.com/ddgksf2013
-#!author= wen704
-#!url= https://github.com/ddgksf2013/Filter/raw/master/Mybreak.list
+#!author= ddgksf2013
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/ddgksf2013_mybreak.module
 
 ########################################
 #分流名称：  广告屏蔽

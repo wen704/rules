@@ -2,7 +2,7 @@
 #!desc= 史上最全酷我音乐净化加VIP音乐畅听，已兼容酷我原版与酷我畅听版
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/Kuwo.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/kuwo.module
 
 # ==UserScript==
 # @ScriptName        酷我音乐、酷我音乐纯净版[ SVIP+净化 ]

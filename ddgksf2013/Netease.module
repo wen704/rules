@@ -1,8 +1,8 @@
-#!name= BiliBili_AdBlock_DIY
-#!desc= B站去广告+1080P高码率
+#!name= 网易云音乐
+#!desc= 网易云音乐
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/Netease.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/Netease.module
 
 # ==UserScript==
 # @ScriptName        网易云音乐

@@ -2,7 +2,7 @@
 #!desc= 喜马拉雅净化
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/Ximalaya.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/Ximalaya.module
 
 # ==UserScript==
 # @ScriptName        喜马拉雅净化[墨鱼版]

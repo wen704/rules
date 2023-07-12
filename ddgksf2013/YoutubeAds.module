@@ -2,7 +2,7 @@
 #!desc= 用于视频、瀑布流、搜索、播放页、短视频及贴片广告、视频自动PIP、后台播放、自动翻译，不适用允许 UDP 转发的节点及 Premium
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/YoutubeAds.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/YoutubeAds.module
 
 ########################################
 #应用名称：  Youtube Block AD

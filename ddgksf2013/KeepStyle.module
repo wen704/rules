@@ -2,7 +2,7 @@
 #!desc= 应用净化去广告
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/KeepStyle.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/KeepStyle.module
 
 // ==UserScript==
 // @ScriptName        Keep 净化

@@ -2,7 +2,7 @@
 #!desc= B站去广告+1080P高码率
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://github.com/ddgksf2013/Rewrite/raw/master/Html/Douban.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/Bilibili.module
 
 # ==UserScript==
 # @ScriptName        BiliBili_AdBlock_DIY

@@ -2,7 +2,7 @@
 #!desc= 自用影视网站去广告配置（不定期更新）
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://github.com/ddgksf2013/Rewrite/raw/master/Html/WebAdBlock.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/WebAdBlock.module
 
 # ==UserScript==
 # @ScriptName        影视网站去广告

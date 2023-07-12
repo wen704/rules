@@ -1,8 +1,8 @@
-#!name= Keep 净化
-#!desc= 应用净化去广告
+#!name= 小红书去广告
+#!desc= 去开屏、瀑布流、启动服务广告及一些隐私、广告、青少年请求，去水印及功能增强
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/KeepStyle.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/XiaoHongShu.module
 
 // ==UserScript==
 // @ScriptName        小红书去广告

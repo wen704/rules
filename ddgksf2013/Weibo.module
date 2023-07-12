@@ -2,7 +2,7 @@
 #!desc= 微博、微博国际版净化，现已二合一，使用中若有问题请发邮件！
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/Weibo.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/Weibo.module
 
 # ==UserScript==
 # @ScriptName        微博&微博国际版净化[墨鱼版]

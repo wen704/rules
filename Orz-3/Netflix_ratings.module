@@ -2,8 +2,9 @@
 #!desc= Netflix评分
 #!homepage= https://github.com/Orz-3
 #!author= Orz-3
-#!url= https://raw.githubusercontent.com/Orz-3/QuantumultX/master/Netflix_ratings.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/Orz-3/Netflix_ratings.module
 
+# 原作者链接 https://raw.githubusercontent.com/Orz-3/QuantumultX/master/Netflix_ratings.conf
 # By yichahucha（https://github.com/yichahucha）
 
 [Script]

@@ -2,7 +2,7 @@
 #!desc= 使用前请卸载百度地图，挂载脚本然后使用
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://gist.githubusercontent.com/ddgksf2013/beec132ca0c3570ffa0cf331bce8f82a/raw/baidumap.adblock.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/baidumap.module
 
 # ==UserScript==
 # @ScriptName        百度地图净化[墨鱼版]

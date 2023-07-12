@@ -2,7 +2,7 @@
 #!desc= 豆瓣电影移动版网页增强，快捷跳转茶杯狐与 Libvio 搜索，豆瓣移动版网页去广告
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
-#!url= https://github.com/ddgksf2013/Rewrite/raw/master/Html/Douban.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/Douban.module
 
 # ==UserScript==
 # @Name              豆瓣电影移动版网页优化

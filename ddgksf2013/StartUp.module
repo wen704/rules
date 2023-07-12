@@ -2,8 +2,8 @@
 #!desc= 去除APP首页启动广告和部分应用内广告，如果有需要的去除广告的APP，可以公众号后台直接回复
 #!homepage= https://github.com/ddgksf2013
 #!author= ddgksf2013
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/ddgksf2013/StartUp.module
 #!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!url= https://gcore.jsdelivr.net/gh/ddgksf2013/Rewrite/AdBlock/StartUp.conf
 
 # ==UserScript==
 # @ScriptName        QX去开屏广告计划 V2.0

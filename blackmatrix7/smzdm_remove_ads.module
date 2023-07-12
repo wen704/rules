@@ -2,8 +2,9 @@
 #!desc= 什么值得买去广告
 #!homepage= https://github.com/blackmatrix7
 #!author= blackmatrix7
-#!url= https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.qxrewrite
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/blackmatrix7/smzdm_remove_ads.module
 
+# 原作者链接 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.qxrewrite
 
 [URL Rewrite]
 # 好价详情页去广告

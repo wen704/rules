@@ -2,7 +2,9 @@
 #!desc= 神机重定向
 #!homepage= https://github.com/DivineEngine
 #!author= DivineEngine
-#!url= https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/General.conf
+#!url= https://raw.githubusercontent.com/wen704/rules/beta/DivineEngine/General.module
+
+# 原作者链接 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/General.conf
 
 [URL Rewrite]
 # Redirect Google Search Service
