@@ -1,0 +1,9 @@
+#!name=威锋
+#!desc=去网页版广告
+
+[Script]
+# > 帖子楼主与评论中间的广告
+ad = type=http-response,pattern=^https:\/\/api\.feng\.com\/v2\/yesfeng\/yesList,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/wen704/rules/main/js/feng.js
+
+[MITM]
+hostname = %APPEND% api.feng.com
