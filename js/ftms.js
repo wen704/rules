@@ -5,7 +5,7 @@ let obj = JSON.parse($response.body);
 if (url.includes("app-bff/v1/version/latestupdate")) {
   obj.data = {};
 } else if (url.includes("ftms-iov-app-car/tlmp/getCarCertificationInfo")) {
-  obj.data.result.realnameStatus = "1";
+  obj.result.realnameStatus = "1";
 }
 
 $done({ body: JSON.stringify(obj) });
