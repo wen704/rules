@@ -1,0 +1,9 @@
+#!name=一汽丰田
+#!desc=去升级提示
+
+[Script]
+# > 升级提示
+update = type=http-response,pattern=^https:\/\/newsuperapp\.ftms\.com\.cn\/app-bff\/v1\/version\/latestupdate,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/wen704/rules/main/js/ftms.js
+
+[MITM]
+hostname = %APPEND% newsuperapp.ftms.com.cn
