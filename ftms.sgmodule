@@ -1,5 +1,8 @@
 #!name=一汽丰田
-#!desc=去升级提示,过认证,全功能
+#!desc=去升级提示,过认证,全功能,去开屏
+
+[URL Rewrite]
+^https?:\/\/newsuperapp\.ftms\.com\.cn\/app-bff\/.*openScreenPicture - reject-200
 
 [Script]
 # > 升级提示
