@@ -11,7 +11,7 @@
 *************************
 
 [Script]
-cron "0 0 7 * * 8" script-path=https://raw.githubusercontent.com/wen704/rules/master/js/constellaction.js, wake-system=1, timeout=60
+cron "0 0 7 * * *" script-path=https://raw.githubusercontent.com/wen704/rules/master/js/constellaction.js, wake-system=1, timeout=60
 
 *************************
 【 QX 1.0.10+ 脚本配置 】 :
