@@ -8,4 +8,4 @@
 #!date=2025-12-14
 
 [Script]
-generic script-path=https://github.com/wen704/rules/js/server-info-pure-loon.js, timeout=10, tag=纯净度查询, img-url=globe.asia.australia.system
+generic script-path=https://raw.githubusercontent.com/wen704/rules/refs/heads/main/js/server-info-pure-loon.js, timeout=10, tag=纯净度查询, img-url=globe.asia.australia.system
