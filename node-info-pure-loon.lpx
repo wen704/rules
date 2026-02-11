@@ -1,0 +1,11 @@
+#!name=节点纯净度及落地检测工具
+#!desc=适用于Loon的节点检测工具，可进行地理位置、节点纯净度、入口落地等查询。请在所有节点页面选择一个节点长按，出现菜单后进行测试。
+#!author=ddgksf2013[https://ddgksf2013.top]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Node_detection_tool.png
+#!tag=节点检测
+#!loon_version=3.2.4(787)
+#!homepage=https://ddgksf2013.top
+#!date=2025-12-14
+
+[Script]
+generic script-path=https://github.com/wen704/rules/js/server-info-pure-loon.js, timeout=10, tag=纯净度查询, img-url=globe.asia.australia.system
